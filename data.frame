@@ -1,0 +1,46 @@
+##Data Frame
+
+friends <- c("a", "b", "c", "d")
+ages <- c(26, 31, 32, 27)
+locations <- c("New York", "London", "London", "Tokyo")
+movie_lover <- c(TRUE, TRUE, FALSE, TRUE)
+
+## create data frame from list
+df <- data.frame(friends,
+                 ages,
+                 locations,
+                 movie_lover)
+
+View(df) ##view table (V พิมพ์ใหญ่)
+
+friends <- c("a", "b", "c", "d")
+age <- c(26, 31, 32, 27)
+locations <- c("New York", "London", "London", "Tokyo")
+movie_lover <- c(TRUE, TRUE, FALSE, TRUE)
+
+##create data frame from list
+my_list <- list(friends = friends,
+                ages = age,
+                locations = locations,
+                movie = movie_lover)
+data.frame(my_list)
+
+## Subset พิมพ์ใน consoleก็ได้[]: ดึงข้อมุลจาก Vector
+friends[1]
+friends[1:3]
+friends[3:4]
+friends[c(1,3)]
+names(age) <- friends 
+ages[age > 30]
+age["a"]
+age[c("a", "b", "c")]
+
+##subset data frame
+df[1,3] ##[row, col]
+df[1:2,4]
+df[1:2, 2:4]
+df[ , "friends"] ##ดึงทุก Row เฉพาะ friends column
+df[ , c("friends", "locations")]
+df[df$movie_lover == TRUE,  ] ##Filter เฉพาะ TRUE movie_lover, == เปรียบเทียบ
+df[df$ages < 30, ]
+df[ df$friends == "c", ]
