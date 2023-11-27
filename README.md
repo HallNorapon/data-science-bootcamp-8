@@ -14,3 +14,5 @@ My data portfolio for data analyst
 - Python Programming
 - Essential Python for Data analyst
 - Dashboard
+
+You can find me on LinkedIn: https://www.linkedin.com/in/norapon-poradok-804b6a19b/
